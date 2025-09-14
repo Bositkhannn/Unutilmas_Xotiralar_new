@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unutilmas Xotiralar - 9 "F"</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <div id="particles-js"></div>
+    
+    <div id="password-lock" class="password-lock">
+        <div class="password-form-container">
+            <h2>Xush kelibsiz! Parolni kiriting</h2>
+            <div class="password-hint">
+                <p>Parol: L </p>
+            </div>
+            <input type="password" id="password-input" placeholder="Parolni kiriting">
+            <button id="password-submit">Kirish</button>
+            <p id="password-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <div class="app-content">
+        <header>
+            <h1>Bizning Sinf 9 "F"</h1>
+            <p>Unutilmas Xotiralar</p>
+            <p class="author">Muallif: Akmalov Bositxon</p>
+        </header>
+
+        <main>
+            <div class="stats-panel">
+                <div class="stat-item">
+                    <span class="stat-number" id="total-count">0</span>
+                    <span class="stat-label">Jami</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="teachers-count">0</span>
+                    <span class="stat-label">O'qituvchilar</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="students-count">0</span>
+                    <span class="stat-label">O'quvchilar</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="photos-count">0</span>
+                    <span class="stat-label">Foto</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Qidirish...">
+                </div>
+
+                <div class="filter-buttons">
+                    <button id="filter-all" class="active">
+                        <i class="fas fa-users"></i> Hammasi
+                    </button>
+                    <button id="filter-teachers">
+                        <i class="fas fa-chalkboard-teacher"></i> O'qituvchilar
+                    </button>
+                    <button id="filter-students">
+                        <i class="fas fa-graduation-cap"></i> O'quvchilar
+                    </button>
+                    <button id="filter-boys">
+                        <i class="fas fa-male"></i> Yigitlar
+                    </button>
+                    <button id="filter-girls">
+                        <i class="fas fa-female"></i> Qizlar
+                    </button>
+                    <button id="filter-favorites">
+                        <i class="fas fa-star"></i> Sevimlilar
+                    </button>
+                </div>
+
+                <div class="view-buttons">
+                    <button id="album-button">
+                        <i class="fas fa-images"></i> Albom
+                    </button>
+                    <button id="timeline-button">
+                        <i class="fas fa-history"></i> Vaqt jadvali
+                    </button>
+                    <button id="theme-button">
+                        <i class="fas fa-moon"></i> Mavzu
+                    </button>
+                </div>
+            </div>
+
+            <div class="classmates" id="classmates-container">
+                <!-- Cards will be generated here -->
+            </div>
+
+            <div class="achievements-panel">
+                <h3>Yutuqlar</h3>
+                <div class="achievements-grid">
+                    <div class="achievement unlocked">
+                        <i class="fas fa-users"></i>
+                        <span>Birinchi qarash</span>
+                    </div>
+                    <div class="achievement locked">
+                        <i class="fas fa-heart"></i>
+                        <span>Sevimlilar</span>
+                    </div>
+                    <div class="achievement locked">
+                        <i class="fas fa-search"></i>
+                        <span>Qidiruvchi</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-content-inner"></div>
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox">
+            <div class="lightbox-content">
+                <span class="lightbox-close">&times;</span>
+                <img src="" alt="Katta rasm" class="lightbox-img">
+                <div class="lightbox-controls">
+                    <button class="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="timeline-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sinf Tarixi</h2>
+                <div class="timeline" id="timeline-container"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2024 9 "F" Sinfi. Barcha huquqlar himoyalangan.</p>
+            <p>Akmalov Bositxon tomonidan yaratilgan</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
